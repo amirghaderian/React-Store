@@ -37,18 +37,15 @@ class Movies extends Component {
     this.setState({ currentPage: page });
   };
   handleGenreSelect = (genre) => {
-    debugger;
     this.setState({ searchQuery: "", selectedGenre: genre, currentPage: 1 });
   };
   handleSort = (sortColumn) => {
     this.setState({ sortColumn });
   };
   handleSearch = (query) => {
-    debugger;
     this.setState({ searchQuery: query, selectedGenre: null, currentPage: 1 });
   };
   getPageData = () => {
-    debugger;
     const {
       pageSize,
       currentPage,
@@ -69,7 +66,6 @@ class Movies extends Component {
     return { totalCount: filtered.length, data: movies };
   };
   render() {
-    debugger;
     const { length } = this.state.movies;
     const { pageSize, currentPage, sortColumn } = this.state;
     if (length === 0) return <p>There are no movies in database.</p>;
