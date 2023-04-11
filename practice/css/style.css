@@ -1,0 +1,12 @@
+#a1:focus {
+    background-color: aquamarine;
+    color: green;
+  }
+  #a2:focus {
+    background-color: rgb(168, 196, 116);
+    color: red;
+  }
+  #a3:focus {
+    background-color: rgb(59, 185, 42);
+    color: rgb(190, 209, 22);
+  }
