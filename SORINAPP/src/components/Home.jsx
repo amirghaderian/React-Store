@@ -1,8 +1,20 @@
 import { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
+import axios from "axios";
 const Home = () => {
+  const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
+
+  const [post, setPost] = useState(null);
+
+  useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setPost(response.data);
+    });
+  }, []);
+
+  if (!post) return null;
   const navigate = useNavigate();
-  const [text,setText]=useState("کریپتوکامرس")
+  const [text, setText] = useState("کریپتوکامرس");
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -41,7 +53,9 @@ const Home = () => {
         </NavLink>
       </div>
       <Outlet />
-      <button onClick={()=>setText("CryptoCommerce")}>{text}</button>
+      <h1>{post.title}</h1>
+      <p>{post.body}</p>
+      <button onClick={() => setText("CryptoCommerce")}>{text}</button>
     </div>
   );
 };
