@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
 const Home = () => {
-  const btnHandler={
+  const btnHandler=()=>{
   
-      axios.get(baseURL).then((response) => {
+{      axios.get(baseURL).then((response) => {
         setPost(response.data);
       })
   }
