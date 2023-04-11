@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
 const Home = () => {
-  const btnHandler=() =>{ 
+  const btnHandler = () => {
+    console.log("object");
     axios.get(baseURL).then((response) => {
       setPost(response.data);
     });
-  }
+  };
   // useEffect(() => {
   //   axios.get(baseURL).then((response) => {
   //     setPost(response.data);
@@ -21,7 +22,7 @@ const Home = () => {
   const [text, setText] = useState("کریپتوکامرس");
   return (
     <div>
-      <button onClick={()=>btnHandler}> change</button>
+      <button onClick={ btnHandler}> change</button>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <NavLink
           to="/login"
