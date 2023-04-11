@@ -16,12 +16,12 @@ const Home = () => {
 
   const [post, setPost] = useState(null);
 
-  if (!post) return null;
+  // if (!post) return null;
   const navigate = useNavigate();
   const [text, setText] = useState("کریپتوکامرس");
   return (
     <div>
-      <button onClick={()=>btnHandler}></button>
+      <button onClick={()=>btnHandler}> change</button>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <NavLink
           to="/login"
