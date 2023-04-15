@@ -18,19 +18,9 @@ const Comment = () => {
   }, []);
   return (
     <div className="comment">
-      <div>
-        {person === null ? <div> noting to show</div> : person.map((p)=>{return <div><p>{p.name}</p>
-        <p></p></div>})}
-        <p>name1</p>
-        <p>email1</p>
-      </div>
-      <div>
-        <p>name2</p>
-        <p>email2</p>
-      </div>
-      <div>
-        <p>name3</p>
-        <p>email3</p>
+      <div className="data">
+        {person === null ? <div> noting to show</div> : person.map((p)=>{return <div> <p>{p.name}</p>
+        <p>{p.email}</p> </div>})}
       </div>
     </div>
   );
