@@ -5,7 +5,7 @@ import "../../assets/styles/comment.css";
 const Comment = () => {
   const [person,setPerson]=(null)
   const fetchData =()=> axios
-    .get("https://jsonplaceholder.typicode.com/comments").then((response)=>{setPerson(response.data.map((i)=>{console.log(i.name)}));})
+    .get("https://jsonplaceholder.typicode.com/comments").then((response)=>{  setPerson(response.data);})
     .catch((error)=>{console.log(error)});
     useEffect(()=>{fetchData()},[])
   return (
