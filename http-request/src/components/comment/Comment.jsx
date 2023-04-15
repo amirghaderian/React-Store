@@ -3,15 +3,13 @@ import { useEffect, useState } from "react";
 import "../../assets/styles/comment.css";
 
 const Comment = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
+  const [person,setPerson]=(null)
   const fetchData =()=> axios
-    .get("https://jsonplaceholder.typicode.com/comments").then((response)=>{(response.data.map((i)=>{i.name}));})
+    .get("https://jsonplaceholder.typicode.com/comments").then((response)=>{setName(response.data.map((i)=>{console.log(i.name)}));})
     .catch((error)=>{console.log(error)});
     useEffect(()=>{fetchData()},[])
   return (
     <div className="comment">
-       
        
       <div>
         <p>name1</p>
