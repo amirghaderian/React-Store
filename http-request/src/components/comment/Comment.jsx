@@ -19,9 +19,10 @@ const Comment = () => {
   return (
     <div className="comment">
       <div className="data">
-        {person === null ? <div> noting to show</div> : person.map((p)=>{return <div> <p>{p.name}</p>
+        {person === null ? <div> noting to show</div> : person.map((p)=>{return <div> <p>{p.name}</p> 
         <p>{p.email}</p> </div>})}
       </div>
+      <div></div>
     </div>
   );
 };
