@@ -6,7 +6,7 @@ const Comment = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const fetchData =()=> axios
-    .get("https://jsonplaceholder.typicode.com/comments").then((response)=>{console.log(response.data.map((i)=>{i.name}));})
+    .get("https://jsonplaceholder.typicode.com/comments").then((response)=>{(response.data.map((i)=>{i.name}));})
     .catch((error)=>{console.log(error)});
     useEffect(()=>{fetchData()},[])
   return (
