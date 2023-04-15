@@ -1,0 +1,5 @@
+.comment{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: large;
+}
